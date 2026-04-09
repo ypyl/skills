@@ -1,0 +1,82 @@
+[
+  {
+    "query": "write me an ahk script that opens notepad when i press win+n",
+    "should_trigger": true
+  },
+  {
+    "query": "how do i make a hotkey that types my email address automatically when i press ctrl+shift+e?",
+    "should_trigger": true
+  },
+  {
+    "query": "i need to automate some repetitive clicks in a windows app - basically it has a bunch of checkboxes i click every morning",
+    "should_trigger": true
+  },
+  {
+    "query": "auto hotkey v2 tutorial for beginners",
+    "should_trigger": true
+  },
+  {
+    "query": "my autohotkey script stopped working after i updated it, can you help debug? it uses Gui, Add, Show syntax",
+    "should_trigger": true
+  },
+  {
+    "query": "i want to remap capslock to escape and also make it work as control when held down",
+    "should_trigger": true
+  },
+  {
+    "query": "write a script that monitors C:\\Users\\myname\\Dropbox\\Incoming for new .xlsx files and shows a toast notification",
+    "should_trigger": true
+  },
+  {
+    "query": "how to send keystrokes to a specific window using autohotkey? like i want to type into a notepad that isnt currently focused",
+    "should_trigger": true
+  },
+  {
+    "query": "can you convert this autohotkey v1 script to v2 syntax? its mostly hotkeys and a couple MsgBox commands",
+    "should_trigger": true
+  },
+  {
+    "query": "build me a quick popup tray menu that launches chrome, vs code, and slack when i right click the tray icon",
+    "should_trigger": true
+  },
+  {
+    "query": "im trying to use ahk but keep getting confused about the difference between :: and ::: syntax",
+    "should_trigger": false
+  },
+  {
+    "query": "how do i schedule tasks on windows without using autohotkey? i know task scheduler exists but i forget the steps",
+    "should_trigger": false
+  },
+  {
+    "query": "my python script needs to click some buttons in a windows app, should i use pyautogui or is there something better?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a javascript bookmarklet that auto-fills a form on a webpage when i click it",
+    "should_trigger": false
+  },
+  {
+    "query": "im learning to code and wondering if autohotkey is a good first language",
+    "should_trigger": false
+  },
+  {
+    "query": "how do i create a simple bash script that renames all files in a folder from lowercase to uppercase?",
+    "should_trigger": false
+  },
+  {
+    "query": "my excel spreadsheet has a column with dates in format MM/DD/YYYY and i need to convert to YYYY-MM-DD",
+    "should_trigger": false
+  },
+  {
+    "query": "i need to automate posting to my company's internal wiki but thats a web app, not a desktop app",
+    "should_trigger": false
+  },
+  {
+    "query": "autohotkey vs autoit - which one should i use for windows automation? any opinions?",
+    "should_trigger": false
+  },
+  {
+    "query": "my gaming keyboard has macro keys and i want to assign sequences to them - does autohotkey help with that or is that just firmware?",
+    "should_trigger": false
+  }
+]

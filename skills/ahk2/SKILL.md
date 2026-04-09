@@ -1,6 +1,6 @@
 ---
 name: ahk2
-description: Use this skill whenever the user asks about AutoHotkey, AHK, hotkeys, keyboard automation, mouse automation, Windows automation, window management, or scripting for Windows. This includes writing new AHK scripts, debugging existing ones, explaining AHK concepts, or looking up AHK functions/features. Always use this skill when the user mentions AutoHotkey, AHK, or asks for help with Windows desktop automation via scripting, even if they don't say "AHK v2" explicitly. The skill ensures correct v2 syntax is used and prevents common v1/v2 confusion.
+description: Use this skill whenever the user mentions AutoHotkey, AHK, or hotkeys — whether they're writing new scripts, debugging existing ones, asking about v1→v2 migration, or looking up AHK functions. Also use this for any Windows desktop automation task (repeated clicks, keystrokes, window control, key remapping, tray menus, file monitoring). This skill ensures correct AHK v2 syntax and guards against common v1→v2 mistakes. Make sure to use this skill whenever the user explicitly mentions AutoHotkey or AHK, even in casual contexts like "can you help with my ahk script?" — don't assume they mean something else.
 ---
 
 # AutoHotkey v2 Scripting Guide
