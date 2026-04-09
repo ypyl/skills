@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "skill_name": "mantine",
+    "skill_path": "C:\\Users\\ypyl\\projects\\skills\\skills\\mantine",
+    "executor_model": "glm-5.1",
+    "analyzer_model": "glm-5.1",
+    "timestamp": "2026-04-09T19:21:44Z",
+    "evals_run": ["dashboard-layout", "registration-form", "profile-card"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "dashboard-layout",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7
+      },
+      "expectations": [
+        { "text": "Uses Mantine AppShell component", "passed": true, "evidence": "AppShell with header and navbar props" },
+        { "text": "Uses separate mobile/desktop Burger toggles with hiddenFrom/visibleFrom", "passed": true, "evidence": "Two Burger components with hiddenFrom/visibleFrom" },
+        { "text": "Uses NavLink for sidebar navigation items", "passed": true, "evidence": "NavLink used for all nav items including nested children" },
+        { "text": "AppShell navbar has breakpoint and collapsed props", "passed": true, "evidence": "Proper breakpoint and collapsed config" },
+        { "text": "Uses useDisclosure from @mantine/hooks", "passed": true, "evidence": "useDisclosure used for mobileOpened and desktopOpened" },
+        { "text": "Includes light/dark mode toggle", "passed": true, "evidence": "ColorSchemeToggle using useMantineColorScheme" },
+        { "text": "Does not use hardcoded pixel values for layout", "passed": true, "evidence": "Uses Mantine spacing/sizing props throughout" }
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "dashboard-layout",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.86,
+        "passed": 6,
+        "failed": 1,
+        "total": 7
+      },
+      "expectations": [
+        { "text": "Uses Mantine AppShell component", "passed": true, "evidence": "AppShell used" },
+        { "text": "Uses separate mobile/desktop Burger toggles", "passed": true, "evidence": "Two Burger components" },
+        { "text": "Uses NavLink for sidebar navigation", "passed": true, "evidence": "NavLink used" },
+        { "text": "AppShell navbar has breakpoint and collapsed props", "passed": true, "evidence": "Proper config" },
+        { "text": "Uses useDisclosure from @mantine/hooks", "passed": true, "evidence": "useDisclosure used" },
+        { "text": "Includes light/dark mode toggle", "passed": true, "evidence": "useMantineColorScheme used" },
+        { "text": "Does not use hardcoded pixel values for layout", "passed": false, "evidence": "Uses inline style={{ borderRadius: 6 }} and padding: '1.5rem'" }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "registration-form",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9
+      },
+      "expectations": [
+        { "text": "Uses useForm from @mantine/form", "passed": true, "evidence": "imported and used" },
+        { "text": "Uses mode: 'uncontrolled'", "passed": true, "evidence": "mode: 'uncontrolled' specified" },
+        { "text": "Uses key={form.key()} on inputs", "passed": true, "evidence": "All inputs have key={form.key()}" },
+        { "text": "Uses form.getInputProps on all inputs", "passed": true, "evidence": "Every input uses form.getInputProps" },
+        { "text": "Passes { type: 'checkbox' } for Checkbox", "passed": true, "evidence": "Used correctly" },
+        { "text": "Password confirmation validates against password", "passed": true, "evidence": "value !== values.password check" },
+        { "text": "Email has regex validation", "passed": true, "evidence": "Regex validation present" },
+        { "text": "Uses form.onSubmit() for submission", "passed": true, "evidence": "form.onSubmit() used" },
+        { "text": "Uses Mantine input components", "passed": true, "evidence": "All Mantine input components used" }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "registration-form",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.78,
+        "passed": 7,
+        "failed": 2,
+        "total": 9
+      },
+      "expectations": [
+        { "text": "Uses useForm from @mantine/form", "passed": true, "evidence": "Used" },
+        { "text": "Uses mode: 'uncontrolled'", "passed": false, "evidence": "No mode specified, defaults to controlled" },
+        { "text": "Uses key={form.key()} on inputs", "passed": false, "evidence": "No form.key() on any input" },
+        { "text": "Uses form.getInputProps on all inputs", "passed": true, "evidence": "All inputs use getInputProps" },
+        { "text": "Passes { type: 'checkbox' } for Checkbox", "passed": true, "evidence": "Used correctly" },
+        { "text": "Password confirmation validates against password", "passed": true, "evidence": "Validation present" },
+        { "text": "Email has regex validation", "passed": true, "evidence": "Regex test present" },
+        { "text": "Uses form.onSubmit() for submission", "passed": true, "evidence": "form.onSubmit() used" },
+        { "text": "Uses Mantine input components", "passed": true, "evidence": "All Mantine inputs used" }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "profile-card",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7
+      },
+      "expectations": [
+        { "text": "Uses Mantine Card component", "passed": true, "evidence": "Card used with appropriate props" },
+        { "text": "Uses Mantine Avatar component", "passed": true, "evidence": "Avatar with color='initials'" },
+        { "text": "Does not manually check color scheme", "passed": true, "evidence": "Relies on semantic tokens" },
+        { "text": "Uses classNames prop with CSS modules", "passed": true, "evidence": "classNames prop used" },
+        { "text": "Uses Mantine semantic color tokens", "passed": true, "evidence": "c='dimmed' used" },
+        { "text": "Uses radius and shadow props on Card", "passed": true, "evidence": "shadow='sm' radius='lg' withBorder" },
+        { "text": "Does not use deprecated v6 props", "passed": true, "evidence": "All v7 API used correctly" }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "profile-card",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.43,
+        "failed": 4,
+        "passed": 3,
+        "total": 7
+      },
+      "expectations": [
+        { "text": "Uses Mantine Card component", "passed": true, "evidence": "Card used" },
+        { "text": "Uses Mantine Avatar component", "passed": true, "evidence": "Avatar used" },
+        { "text": "Does not manually check color scheme", "passed": false, "evidence": "Uses useMantineColorScheme and useMantineTheme to manually check dark mode" },
+        { "text": "Uses classNames prop with CSS modules", "passed": false, "evidence": "Uses inline style prop extensively" },
+        { "text": "Uses Mantine semantic color tokens", "passed": false, "evidence": "Uses theme.colors.dark[7], theme.white, etc. instead of semantic tokens" },
+        { "text": "Uses radius and shadow props on Card", "passed": true, "evidence": "radius='lg' used" },
+        { "text": "Does not use deprecated v6 props", "passed": false, "evidence": "Uses noWrap, direction, spacing, weight, color - all deprecated" }
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": { "mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0 },
+      "notes": "All 3 evals score 100%. Skill effectively guides model to use recommended Mantine patterns."
+    },
+    "without_skill": {
+      "pass_rate": { "mean": 0.69, "stddev": 0.22, "min": 0.43, "max": 0.86 },
+      "notes": "Without skill, model uses deprecated v6 props, inline styles instead of CSS modules, manual dark mode checks, and misses uncontrolled mode for forms."
+    },
+    "delta": {
+      "pass_rate": "+0.31",
+      "notes": "Skill improves pass rate significantly, especially on styling patterns (profile card: +57%)."
+    }
+  },
+  "notes": [
+    "Biggest skill impact on profile-card eval: without-skill used 5 deprecated v6 API patterns, inline styles, and manual dark mode checking",
+    "Registration form: skill caught uncontrolled mode and form.key() which are critical for performance — without-skill missed both",
+    "Dashboard layout: both versions were solid; skill version avoided inline styles for layout",
+    "The skill's guidance on 'use classNames with CSS modules' and 'prefer Mantine semantic tokens' produced the most impactful improvements",
+    "The skill's 'Common Mistakes to Avoid' section effectively caught uncontrolled mode and form.key() patterns"
+  ]
+}

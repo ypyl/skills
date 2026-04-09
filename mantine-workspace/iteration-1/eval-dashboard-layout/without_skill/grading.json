@@ -1,0 +1,12 @@
+{
+  "expectations": [
+    { "text": "Uses Mantine AppShell component", "passed": true, "evidence": "AppShell with header and navbar props" },
+    { "text": "Uses separate mobile/desktop Burger toggles with hiddenFrom/visibleFrom", "passed": true, "evidence": "Two Burger components with hiddenFrom and visibleFrom props" },
+    { "text": "Uses NavLink for sidebar navigation", "passed": true, "evidence": "NavLink used for all nav items" },
+    { "text": "AppShell navbar has breakpoint and collapsed props", "passed": true, "evidence": "navbar={{ width: 260, breakpoint: 'sm', collapsed: { mobile: !mobileOpened, desktop: !desktopOpened } }}" },
+    { "text": "Uses useDisclosure from @mantine/hooks", "passed": true, "evidence": "useDisclosure imported and used" },
+    { "text": "Includes light/dark mode toggle", "passed": true, "evidence": "useMantineColorScheme with toggleColorScheme" },
+    { "text": "Does not use hardcoded pixel values for layout", "passed": false, "evidence": "Uses inline style={{ borderRadius: 6 }} on NavLink and padding: '1.5rem' on metric cards" }
+  ],
+  "summary": { "passed": 6, "failed": 1, "total": 7, "pass_rate": 0.86 }
+}

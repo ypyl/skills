@@ -1,0 +1,6 @@
+{
+  "eval_id": 2,
+  "eval_name": "registration-form",
+  "prompt": "Create a user registration form with Mantine that has email, password (with confirmation), first name, last name, and agree to terms checkbox. All fields are required and email needs validation.",
+  "assertions": []
+}

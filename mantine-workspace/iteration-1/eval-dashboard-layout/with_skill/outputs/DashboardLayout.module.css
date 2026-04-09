@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-inline: var(--mantine-spacing-md);
+}
+
+.navbarTitle {
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-md) var(--mantine-spacing-xs);
+  margin-bottom: var(--mantine-spacing-xs);
+}

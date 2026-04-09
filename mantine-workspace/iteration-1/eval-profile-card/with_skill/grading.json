@@ -1,0 +1,12 @@
+{
+  "expectations": [
+    { "text": "Uses Mantine Card component", "passed": true, "evidence": "Card with shadow='sm', radius='lg', withBorder, padding='md'" },
+    { "text": "Uses Mantine Avatar component", "passed": true, "evidence": "Avatar with name, color='initials', radius='xl'" },
+    { "text": "Does not manually check color scheme for styling", "passed": true, "evidence": "No useMantineColorScheme or useMantineTheme usage - relies on Card withBorder and semantic color tokens" },
+    { "text": "Uses classNames prop with CSS modules", "passed": true, "evidence": "classNames={{ root: classes.card }} and classNames={{ root: classes.avatar }}" },
+    { "text": "Uses Mantine semantic color tokens", "passed": true, "evidence": "Uses c='dimmed' for role text, Mantine handles theming internally" },
+    { "text": "Uses radius and shadow props on Card", "passed": true, "evidence": "Card shadow='sm' radius='lg' withBorder" },
+    { "text": "Does not use deprecated Mantine v6 props", "passed": true, "evidence": "Uses wrap='nowrap' correctly, fw prop used correctly" }
+  ],
+  "summary": { "passed": 7, "failed": 0, "total": 7, "pass_rate": 1.0 }
+}

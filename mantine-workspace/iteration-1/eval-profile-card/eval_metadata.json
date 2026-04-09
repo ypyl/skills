@@ -1,0 +1,6 @@
+{
+  "eval_id": 3,
+  "eval_name": "profile-card",
+  "prompt": "I'm using Mantine in my project and I want a card component that shows a user profile with their avatar on the left, name and role on the right, and a follow button. The card should have rounded corners, a subtle shadow, and look nice in both light and dark mode.",
+  "assertions": []
+}

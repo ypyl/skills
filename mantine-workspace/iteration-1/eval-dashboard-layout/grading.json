@@ -1,0 +1,29 @@
+{
+  "eval_id": 1,
+  "eval_name": "dashboard-layout",
+  "prompt": "I need to build a dashboard for my SaaS app using Mantine. It should have a sidebar navbar, header, and main content area. I want it to be responsive so the sidebar collapses on mobile.",
+  "grading": {
+    "with_skill": {
+      "assertions": [
+        { "name": "uses-appshell", "text": "Uses Mantine AppShell component", "passed": true, "evidence": "AppShell with header and navbar props" },
+        { "name": "responsive-burger", "text": "Uses separate mobile/desktop Burger toggles with hiddenFrom/visibleFrom", "passed": true, "evidence": "Two Burger components, one with hiddenFrom='sm' and one with visibleFrom='sm'" },
+        { "name": "navlink-navigation", "text": "Uses NavLink for sidebar navigation items", "passed": true, "evidence": "NavLink used for all nav items including nested children" },
+        { "name": "responsive-collapse", "text": "AppShell navbar has breakpoint and collapsed props", "passed": true, "evidence": "navbar={{ width: 260, breakpoint: 'sm', collapsed: { mobile: !mobileOpened, desktop: !desktopOpened } }}" },
+        { "name": "uses-mantine-hooks", "text": "Uses useDisclosure from @mantine/hooks", "passed": true, "evidence": "useDisclosure imported from @mantine/hooks, used for mobileOpened and desktopOpened" },
+        { "name": "color-scheme-toggle", "text": "Includes light/dark mode toggle", "passed": true, "evidence": "ColorSchemeToggle component using useMantineColorScheme with toggleColorScheme" },
+        { "name": "no-raw-css-heights", "text": "Does not use hardcoded pixel values for layout", "passed": true, "evidence": "Uses Mantine spacing/sizing props throughout, header uses height: 60 via AppShell header prop" }
+      ]
+    },
+    "without_skill": {
+      "assertions": [
+        { "name": "uses-appshell", "text": "Uses Mantine AppShell component", "passed": true, "evidence": "AppShell with header and navbar props" },
+        { "name": "responsive-burger", "text": "Uses separate mobile/desktop Burger toggles", "passed": true, "evidence": "Two Burger components with hiddenFrom and visibleFrom props" },
+        { "name": "navlink-navigation", "text": "Uses NavLink for sidebar navigation", "passed": true, "evidence": "NavLink used for all nav items" },
+        { "name": "responsive-collapse", "text": "AppShell navbar has breakpoint and collapsed props", "passed": true, "evidence": "navbar={{ width: 260, breakpoint: 'sm', collapsed: { mobile: !mobileOpened, desktop: !desktopOpened } }}" },
+        { "name": "uses-mantine-hooks", "text": "Uses useDisclosure from @mantine/hooks", "passed": true, "evidence": "useDisclosure imported and used" },
+        { "name": "color-scheme-toggle", "text": "Includes light/dark mode toggle", "passed": true, "evidence": "useMantineColorScheme with toggleColorScheme" },
+        { "name": "no-raw-css-heights", "text": "Does not use hardcoded pixel values", "passed": false, "evidence": "Uses inline style={{ borderRadius: 6 }} on NavLink and padding: '1.5rem' on metric cards" }
+      ]
+    }
+  }
+}

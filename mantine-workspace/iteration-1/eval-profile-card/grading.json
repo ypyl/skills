@@ -1,0 +1,29 @@
+{
+  "eval_id": 3,
+  "eval_name": "profile-card",
+  "prompt": "I'm using Mantine in my project and I want a card component that shows a user profile with their avatar on the left, name and role on the right, and a follow button. The card should have rounded corners, a subtle shadow, and look nice in both light and dark mode.",
+  "grading": {
+    "with_skill": {
+      "assertions": [
+        { "name": "uses-mantine-card", "text": "Uses Mantine Card component", "passed": true, "evidence": "Uses Card with shadow='sm', radius='lg', withBorder, padding='md'" },
+        { "name": "uses-mantine-avatar", "text": "Uses Mantine Avatar component", "passed": true, "evidence": "Avatar with name, color='initials', radius='xl'" },
+        { "name": "no-manual-dark-mode", "text": "Does not manually check color scheme", "passed": true, "evidence": "No useMantineColorScheme or useMantineTheme usage - relies on Card withBorder and semantic color tokens" },
+        { "name": "uses-classnames-not-styles", "text": "Uses classNames prop with CSS modules", "passed": true, "evidence": "classNames={{ root: classes.card }} and classNames={{ root: classes.avatar }}" },
+        { "name": "mantine-semantic-colors", "text": "Uses Mantine semantic color tokens", "passed": true, "evidence": "Uses c='dimmed' for role text, Mantine handles theming internally" },
+        { "name": "radius-shadow-props", "text": "Uses radius and shadow props on Card", "passed": true, "evidence": "Card shadow='sm' radius='lg' withBorder" },
+        { "name": "no-deprecated-props", "text": "Does not use deprecated v6 props", "passed": true, "evidence": "Uses noWrap (which is fine in v7), Group uses wrap='nowrap' properly, fw prop used correctly" }
+      ]
+    },
+    "without_skill": {
+      "assertions": [
+        { "name": "uses-mantine-card", "text": "Uses Mantine Card component", "passed": true, "evidence": "Card component used" },
+        { "name": "uses-mantine-avatar", "text": "Uses Mantine Avatar component", "passed": true, "evidence": "Avatar with src, size, radius" },
+        { "name": "no-manual-dark-mode", "text": "Does not manually check color scheme", "passed": false, "evidence": "Imports and uses useMantineColorScheme() and useMantineTheme() to check isDark and manually set colors" },
+        { "name": "uses-classnames-not-styles", "text": "Uses classNames over inline styles", "passed": false, "evidence": "Uses style prop extensively with inline styles for backgroundColor, borderColor, borderWidth, etc." },
+        { "name": "mantine-semantic-colors", "text": "Uses Mantine semantic color tokens", "passed": false, "evidence": "Uses theme.colors.dark[7], theme.white, theme.colors.dark[3], theme.colors.gray[6] - manual color lookups instead of semantic tokens" },
+        { "name": "radius-shadow-props", "text": "Uses radius and shadow props", "passed": true, "evidence": "Card radius='lg' shadow={isDark ? 'xl' : 'sm'} - though shadow differs by mode unnecessarily" },
+        { "name": "no-deprecated-props", "text": "Does not use deprecated v6 props", "passed": false, "evidence": "Uses noWrap (should be wrap='nowrap' in v7), direction='column' (should be vertical in Group or use Stack), spacing={4} (should be gap='4'), weight={600} (should be fw={600}), color on Text (should use c prop)" }
+      ]
+    }
+  }
+}

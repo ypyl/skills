@@ -1,0 +1,33 @@
+{
+  "eval_id": 2,
+  "eval_name": "registration-form",
+  "prompt": "Create a user registration form with Mantine that has email, password (with confirmation), first name, last name, and agree to terms checkbox. All fields are required and email needs validation.",
+  "grading": {
+    "with_skill": {
+      "assertions": [
+        { "name": "uses-useform", "text": "Uses useForm from @mantine/form", "passed": true, "evidence": "Line 1: import { useForm } from '@mantine/form';" },
+        { "name": "uncontrolled-mode", "text": "Uses mode: 'uncontrolled' (recommended)", "passed": true, "evidence": "Line 23: mode: 'uncontrolled'" },
+        { "name": "form-keys", "text": "Uses key={form.key('fieldName')} on inputs", "passed": true, "evidence": "All inputs have key={form.key('fieldName')}" },
+        { "name": "getInputProps", "text": "Uses form.getInputProps on all inputs", "passed": true, "evidence": "Every input uses {...form.getInputProps('fieldName')}" },
+        { "name": "checkbox-type", "text": "Passes { type: 'checkbox' } to getInputProps for Checkbox", "passed": true, "evidence": "Line 96: {...form.getInputProps('agreeToTerms', { type: 'checkbox' })}" },
+        { "name": "password-validation", "text": "Password confirmation validates against password value", "passed": true, "evidence": "Line 37-38: confirmPassword: (value, values) => value !== values.password ? 'Passwords do not match' : null" },
+        { "name": "email-validation", "text": "Email has regex validation", "passed": true, "evidence": "Line 34: email: (value) => (/^\\S+@\\S+\\.\\S+$/.test(value) ? null : 'Invalid email address')" },
+        { "name": "onSubmit-handler", "text": "Uses form.onSubmit() for form submission", "passed": true, "evidence": "Line 51: <form onSubmit={form.onSubmit((values) => console.log(values))}>" },
+        { "name": "mantine-inputs", "text": "Uses Mantine TextInput, PasswordInput, Checkbox, Button", "passed": true, "evidence": "Imports and uses TextInput, PasswordInput, Checkbox, Button, Group, Stack, Paper, Title from @mantine/core" }
+      ]
+    },
+    "without_skill": {
+      "assertions": [
+        { "name": "uses-useform", "text": "Uses useForm from @mantine/form", "passed": true, "evidence": "Uses useForm" },
+        { "name": "uncontrolled-mode", "text": "Uses mode: 'uncontrolled'", "passed": false, "evidence": "No mode specified, defaults to controlled which re-renders on every keystroke" },
+        { "name": "form-keys", "text": "Uses key={form.key()} on inputs", "passed": false, "evidence": "No key={form.key()} on any inputs - needed for uncontrolled mode" },
+        { "name": "getInputProps", "text": "Uses form.getInputProps on all inputs", "passed": true, "evidence": "All inputs use {...form.getInputProps('fieldName')}" },
+        { "name": "checkbox-type", "text": "Passes { type: 'checkbox' } for Checkbox", "passed": true, "evidence": "Line 113: {...form.getInputProps('agreeToTerms', { type: 'checkbox' })}" },
+        { "name": "password-validation", "text": "Password confirmation validates against password", "passed": true, "evidence": "value !== values.password check present" },
+        { "name": "email-validation", "text": "Email has regex validation", "passed": true, "evidence": "Regex test present" },
+        { "name": "onSubmit-handler", "text": "Uses form.onSubmit()", "passed": true, "evidence": "Uses form.onSubmit()" },
+        { "name": "mantine-inputs", "text": "Uses Mantine TextInput, PasswordInput, Checkbox, Button", "passed": true, "evidence": "Imports and uses correct components" }
+      ]
+    }
+  }
+}

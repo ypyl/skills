@@ -1,0 +1,19 @@
+.card {
+  border-radius: var(--mantine-radius-lg);
+}
+
+.avatar {
+  flex-shrink: 0;
+}
+
+.info {
+  min-width: 0;
+}
+
+.name {
+  line-height: 1.2;
+}
+
+.role {
+  line-height: 1.2;
+}

@@ -1,0 +1,12 @@
+{
+  "expectations": [
+    { "text": "Uses Mantine Card component", "passed": true, "evidence": "Card component used" },
+    { "text": "Uses Mantine Avatar component", "passed": true, "evidence": "Avatar with src, size, radius" },
+    { "text": "Does not manually check color scheme for styling", "passed": false, "evidence": "Imports useMantineColorScheme() and useMantineTheme(), manually checking isDark to set backgroundColor and borderColor" },
+    { "text": "Uses classNames prop with CSS modules", "passed": false, "evidence": "Uses inline style prop extensively for backgroundColor, borderColor, borderWidth, borderStyle" },
+    { "text": "Uses Mantine semantic color tokens", "passed": false, "evidence": "Uses theme.colors.dark[7], theme.white, theme.colors.dark[3], theme.colors.gray[6] - manual color lookups instead of semantic tokens" },
+    { "text": "Uses radius and shadow props on Card", "passed": true, "evidence": "Card radius='lg' used, though shadow differs by color scheme unnecessarily" },
+    { "text": "Does not use deprecated Mantine v6 props", "passed": false, "evidence": "Uses noWrap (should be wrap='nowrap'), direction='column' (should be Stack), spacing={4} (should be gap), weight={600} (should be fw={600}), color prop on Text (should be c)" }
+  ],
+  "summary": { "passed": 3, "failed": 4, "total": 7, "pass_rate": 0.43 }
+}

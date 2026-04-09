@@ -1,0 +1,6 @@
+{
+  "eval_id": 1,
+  "eval_name": "dashboard-layout",
+  "prompt": "I need to build a dashboard for my SaaS app using Mantine. It should have a sidebar navbar, header, and main content area. I want it to be responsive so the sidebar collapses on mobile.",
+  "assertions": []
+}

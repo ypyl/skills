@@ -1,0 +1,161 @@
+[
+  {
+    "id": 1,
+    "prompt": "I need to build a dashboard for my SaaS app using Mantine. It should have a sidebar navbar, header, and main content area. I want it to be responsive so the sidebar collapses on mobile.",
+    "expected_output": "A complete React/Next.js component using Mantine's AppShell, with responsive sidebar, header, and main content area. Should use @mantine/core components like AppShell, Navbar, Header, Burger, etc. with proper responsive breakpoints.",
+    "assertions": [
+      {
+        "name": "uses-appshell",
+        "text": "Uses Mantine AppShell component",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "responsive-burger",
+        "text": "Uses separate mobile/desktop Burger toggles with hiddenFrom/visibleFrom",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "navlink-navigation",
+        "text": "Uses NavLink for sidebar navigation items",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "responsive-collapse",
+        "text": "AppShell navbar has breakpoint and collapsed.mobile/collapsed.desktop props",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "uses-mantine-hooks",
+        "text": "Uses useDisclosure from @mantine/hooks for toggle state",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "color-scheme-toggle",
+        "text": "Includes light/dark mode toggle using useMantineColorScheme",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "no-raw-css-heights",
+        "text": "Does not use hardcoded pixel values for layout dimensions (uses Mantine spacing/sizing)",
+        "passed": null,
+        "evidence": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "prompt": "Create a user registration form with Mantine that has email, password (with confirmation), first name, last name, and agree to terms checkbox. All fields are required and email needs validation.",
+    "expected_output": "A complete React component using useForm from @mantine/form with proper validation, Mantine input components, and form submission handling.",
+    "assertions": [
+      {
+        "name": "uses-useform",
+        "text": "Uses useForm from @mantine/form",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "uncontrolled-mode",
+        "text": "Uses mode: 'uncontrolled' (recommended)",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "form-keys",
+        "text": "Uses key={form.key('fieldName')} on uncontrolled inputs",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "getInputProps",
+        "text": "Uses form.getInputProps('fieldName') on all inputs",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "checkbox-type",
+        "text": "Passes { type: 'checkbox' } to getInputProps for Checkbox",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "password-validation",
+        "text": "Password confirmation validates against password value",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "email-validation",
+        "text": "Email has regex validation",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "onSubmit-handler",
+        "text": "Uses form.onSubmit() for form submission",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "mantine-inputs",
+        "text": "Uses Mantine TextInput, PasswordInput, Checkbox, Button components",
+        "passed": null,
+        "evidence": ""
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "prompt": "I'm using Mantine in my project and I want a card component that shows a user profile with their avatar on the left, name and role on the right, and a follow button. The card should have rounded corners, a subtle shadow, and look nice in both light and dark mode.",
+    "expected_output": "A React component using Mantine Card, Avatar, Text, Button, Group with CSS modules or proper Mantine styling that works in both light and dark modes.",
+    "assertions": [
+      {
+        "name": "uses-mantine-card",
+        "text": "Uses Mantine Card component",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "uses-mantine-avatar",
+        "text": "Uses Mantine Avatar component",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "no-manual-dark-mode",
+        "text": "Does not manually check color scheme via useMantineColorScheme for styling (relies on Mantine's semantic tokens/classes instead)",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "uses-classnames-not-styles",
+        "text": "Uses classNames prop with CSS modules rather than inline styles prop",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "mantine-semantic-colors",
+        "text": "Uses Mantine semantic color tokens (c='dimmed', etc.) instead of hardcoded colors",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "radius-shadow-props",
+        "text": "Uses radius and shadow props on Card component rather than inline styles",
+        "passed": null,
+        "evidence": ""
+      },
+      {
+        "name": "no-deprecated-props",
+        "text": "Does not use deprecated Mantine v6 props (noWrap, direction, spacing, weight, color)",
+        "passed": null,
+        "evidence": ""
+      }
+    ]
+  }
+]

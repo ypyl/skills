@@ -1,0 +1,14 @@
+{
+  "expectations": [
+    { "text": "Uses useForm from @mantine/form", "passed": true, "evidence": "Imports and uses useForm" },
+    { "text": "Uses mode: 'uncontrolled'", "passed": false, "evidence": "No mode specified, defaults to controlled which re-renders on every keystroke" },
+    { "text": "Uses key={form.key()} on inputs", "passed": false, "evidence": "No key={form.key()} on any inputs - needed for uncontrolled mode" },
+    { "text": "Uses form.getInputProps on all inputs", "passed": true, "evidence": "All inputs use {...form.getInputProps('fieldName')}" },
+    { "text": "Passes { type: 'checkbox' } for Checkbox", "passed": true, "evidence": "form.getInputProps('agreeToTerms', { type: 'checkbox' })" },
+    { "text": "Password confirmation validates against password", "passed": true, "evidence": "value !== values.password check present" },
+    { "text": "Email has regex validation", "passed": true, "evidence": "Regex test present" },
+    { "text": "Uses form.onSubmit()", "passed": true, "evidence": "Uses form.onSubmit()" },
+    { "text": "Uses Mantine TextInput, PasswordInput, Checkbox, Button", "passed": true, "evidence": "All components imported and used" }
+  ],
+  "summary": { "passed": 7, "failed": 2, "total": 9, "pass_rate": 0.78 }
+}
