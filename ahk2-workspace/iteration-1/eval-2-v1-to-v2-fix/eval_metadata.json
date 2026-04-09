@@ -1,0 +1,32 @@
+{
+  "eval_id": 2,
+  "eval_name": "v1-to-v2-fix",
+  "prompt": "I have this AHK script that's not working. Can you fix it?\n\nMsgBox, Hello World\nMyVar = Some text\nIf MyVar = Hello\n{\n    MsgBox, %MyVar%\n}",
+  "assertions": [
+    {
+      "name": "msgbox-v2-syntax",
+      "type": "regex",
+      "pattern": "MsgBox\\s+(\"|MyVar)"
+    },
+    {
+      "name": "assignment-latest-colon",
+      "type": "regex",
+      "pattern": ":="
+    },
+    {
+      "name": "if-parens",
+      "type": "regex",
+      "pattern": "if\\s*\\("
+    },
+    {
+      "name": "no-percent-var",
+      "type": "llm",
+      "text": "The script does not use %Var% syntax for variable access in expressions (it should just use the variable name directly)"
+    },
+    {
+      "name": "all-v1-fixed",
+      "type": "llm",
+      "text": "All v1 syntax patterns have been converted: MsgBox command syntax to function syntax, = assignment to :=, If without parens to if with parens, %MyVar% to MyVar"
+    }
+  ]
+}

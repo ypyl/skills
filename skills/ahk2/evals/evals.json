@@ -1,0 +1,50 @@
+{
+  "skill_name": "ahk2",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write me an AutoHotkey script that maps Ctrl+Shift+T to type my email address and Ctrl+Shift+D to type the current date in YYYY-MM-DD format",
+      "expected_output": "A working AHK v2 script with correct function call syntax (no v1 command syntax), proper hotkey definitions using ^+t and ^+d, usage of A_YYYY/A_MM/A_DD or FormatTime, and #SingleInstance Force. Should NOT use MsgBox command syntax or bare variable references with %.",
+      "files": [],
+      "assertions": [
+        {"name": "uses-v2-syntax", "type": "llm", "text": "The script uses AHK v2 syntax (function call style, := assignment, quoted strings) not v1 command syntax"},
+        {"name": "has-requires-directive", "type": "regex", "pattern": "#Requires AutoHotkey v2"},
+        {"name": "ctrl-shift-t-hotkey", "type": "regex", "pattern": "\\^\\+[tT]::"},
+        {"name": "ctrl-shift-d-hotkey", "type": "regex", "pattern": "\\^\\+[dD]::"},
+        {"name": "uses-send", "type": "regex", "pattern": "[Ss]end"},
+        {"name": "date-format-correct", "type": "regex", "pattern": "(A_YYYY|FormatTime|yyyy-MM)"},
+        {"name": "no-v1-syntax", "type": "llm", "text": "The script does not use any AHK v1 syntax (no MsgBox comma syntax, no bare = assignment, no %Var% in expressions)"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have this AHK script that's not working. Can you fix it?\n\nMsgBox, Hello World\nMyVar = Some text\nIf MyVar = Hello\n{\n    MsgBox, %MyVar%\n}",
+      "expected_output": "Corrected script converting v1 syntax to v2: MsgBox \"Hello World\", MyVar := \"Some text\", if (MyVar = \"Hello\") or if MyVar = \"Hello\", { MsgBox MyVar }. Should explain the v1→v2 changes made. Should use proper v2 string quoting and expression syntax throughout.",
+      "files": [],
+      "assertions": [
+        {"name": "msgbox-v2-syntax", "type": "regex", "pattern": "MsgBox\\s+(\"|MyVar)"},
+        {"name": "assignment-latest-colon", "type": "regex", "pattern": ":="},
+        {"name": "if-parens", "type": "regex", "pattern": "if\\s*\\("},
+        {"name": "no-percent-var", "type": "llm", "text": "The script does not use %Var% syntax for variable access in expressions (it should just use the variable name directly)"},
+        {"name": "all-v1-fixed", "type": "llm", "text": "All v1 syntax patterns have been converted: MsgBox command syntax to function syntax, = assignment to :=, If without parens to if with parens, %MyVar% to MyVar"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I need an AHK v2 script that monitors a folder for new .txt files. When a new text file appears, it should read the contents and show a MsgBox with the filename and first line of the file. Also add a tray menu option to pause/resume monitoring.",
+      "expected_output": "A complete AHK v2 script using SetTimer with a folder monitoring function, Loop Files, FileRead, proper tray menu, and v2 MsgBox syntax. Should use Persistent to keep script alive. Should NOT use v1 command syntax.",
+      "files": [],
+      "assertions": [
+        {"name": "uses-v2-syntax", "type": "llm", "text": "The script uses AHK v2 syntax throughout (function call style, := assignment, quoted strings, no v1 command syntax)"},
+        {"name": "has-requires-directive", "type": "regex", "pattern": "#Requires AutoHotkey v2"},
+        {"name": "monitors-folder", "type": "regex", "pattern": "(Loop Files|SetTimer)"},
+        {"name": "reads-file", "type": "regex", "pattern": "(FileRead|FileOpen)"},
+        {"name": "shows-msgbox", "type": "regex", "pattern": "MsgBox"},
+        {"name": "tray-menu-functionality", "type": "regex", "pattern": "(A_TrayMenu|MenuTray|TrayTip)"},
+        {"name": "persistent-or-hotkey", "type": "regex", "pattern": "Persistent"},
+        {"name": "error-handling", "type": "regex", "pattern": "try"},
+        {"name": "no-v1-syntax", "type": "llm", "text": "The script does not use any AHK v1 syntax (no command-style commas, no bare = assignments, no %Var% in expressions, no ErrorLevel usage)"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "skill_name": "ahk2",
+    "skill_path": "C:/Users/ypyl/projects/skills/skills/ahk2",
+    "executor_model": "glm-5.1",
+    "analyzer_model": "manual",
+    "timestamp": "2026-04-09",
+    "evals_run": ["eval-1-hotkey-email-date", "eval-2-v1-to-v2-fix", "eval-3-folder-monitor"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": "eval-1-hotkey-email-date",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "assertions_total": 7,
+      "assertions_passed": 7,
+      "time_seconds": null,
+      "tokens": null
+    },
+    {
+      "eval_id": "eval-1-hotkey-email-date",
+      "configuration": "without_skill",
+      "pass_rate": 1.0,
+      "assertions_total": 7,
+      "assertions_passed": 7,
+      "time_seconds": null,
+      "tokens": null
+    },
+    {
+      "eval_id": "eval-2-v1-to-v2-fix",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "assertions_total": 5,
+      "assertions_passed": 5,
+      "time_seconds": null,
+      "tokens": null
+    },
+    {
+      "eval_id": "eval-2-v1-to-v2-fix",
+      "configuration": "without_skill",
+      "pass_rate": 1.0,
+      "assertions_total": 5,
+      "assertions_passed": 5,
+      "time_seconds": null,
+      "tokens": null
+    },
+    {
+      "eval_id": "eval-3-folder-monitor",
+      "configuration": "with_skill",
+      "pass_rate": 1.0,
+      "assertions_total": 9,
+      "assertions_passed": 9,
+      "time_seconds": null,
+      "tokens": null
+    },
+    {
+      "eval_id": "eval-3-folder-monitor",
+      "configuration": "without_skill",
+      "pass_rate": 0.67,
+      "assertions_total": 9,
+      "assertions_passed": 6,
+      "time_seconds": null,
+      "tokens": null
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": 1.0,
+      "total_assertions": 21,
+      "passed_assertions": 21
+    },
+    "without_skill": {
+      "pass_rate": 0.86,
+      "total_assertions": 21,
+      "passed_assertions": 18
+    },
+    "delta": {
+      "pass_rate": "+0.14",
+      "assertions_delta": "+3"
+    }
+  },
+  "notes": [
+    "Eval 1 (hotkey-email-date): Both with_skill and without_skill produced correct v2 syntax. Without_skill used FormatTime which is also valid.",
+    "Eval 2 (v1-to-v2-fix): Both produced correct conversions. Minor style differences (with_skill used statement syntax MsgBox 'text', without_skill used parentheses MsgBox('text')).",
+    "Eval 3 (folder-monitor): with_skill produced fully correct v2 code using A_TrayMenu and Persistent. without_skill used MenuTray (v1 syntax) and lacked Persistent directive - these are real bugs that would cause the script to fail."
+  ]
+}

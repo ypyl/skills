@@ -1,0 +1,30 @@
+{
+  "eval_id": 1,
+  "eval_name": "hotkey-email-date",
+  "results": [
+    {
+      "run_id": "with_skill",
+      "expectations": [
+        {"text": "uses-v2-syntax", "passed": true, "evidence": "Uses $^+T::Send, $^+D::Send - v2 function call statement syntax, no v1 command syntax"},
+        {"text": "has-requires-directive", "passed": true, "evidence": "Line 1: #Requires AutoHotkey v2.0"},
+        {"text": "ctrl-shift-t-hotkey", "passed": true, "evidence": "$^+T:: on line 4"},
+        {"text": "ctrl-shift-d-hotkey", "passed": true, "evidence": "$^+D:: on line 6"},
+        {"text": "uses-send", "passed": true, "evidence": "Send used on both lines"},
+        {"text": "date-format-correct", "passed": true, "evidence": "Uses A_YYYY '-' A_MM '-' A_DD with auto-concat"},
+        {"text": "no-v1-syntax", "passed": true, "evidence": "No MsgBox comma syntax, no bare = assignments, no %Var%"}
+      ]
+    },
+    {
+      "run_id": "without_skill",
+      "expectations": [
+        {"text": "uses-v2-syntax", "passed": true, "evidence": "Uses ^+t:: { Send() } syntax - v2 valid"},
+        {"text": "has-requires-directive", "passed": true, "evidence": "Line 1: #Requires AutoHotkey v2.0"},
+        {"text": "ctrl-shift-t-hotkey", "passed": true, "evidence": "^+t:: on line 3"},
+        {"text": "ctrl-shift-d-hotkey", "passed": true, "evidence": "^+d:: on line 7"},
+        {"text": "uses-send", "passed": true, "evidence": "Send() used"},
+        {"text": "date-format-correct", "passed": true, "evidence": "Uses FormatTime(, \"yyyy-MM-dd\")"},
+        {"text": "no-v1-syntax", "passed": true, "evidence": "No v1 syntax detected"}
+      ]
+    }
+  ]
+}

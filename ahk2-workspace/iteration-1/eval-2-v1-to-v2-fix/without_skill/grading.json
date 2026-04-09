@@ -1,0 +1,26 @@
+{
+  "eval_id": 2,
+  "eval_name": "v1-to-v2-fix",
+  "results": [
+    {
+      "run_id": "with_skill",
+      "expectations": [
+        {"text": "msgbox-v2-syntax", "passed": true, "evidence": "MsgBox \"Hello World\" and MsgBox MyVar - v2 function call statement syntax"},
+        {"text": "assignment-latest-colon", "passed": true, "evidence": "MyVar := \"Some text\" on line 5"},
+        {"text": "if-parens", "passed": true, "evidence": "if (MyVar = \"Hello\") on line 6"},
+        {"text": "no-percent-var", "passed": true, "evidence": "Uses MyVar directly, not %MyVar%"},
+        {"text": "all-v1-fixed", "passed": true, "evidence": "All 4 v1 patterns converted: MsgBox command→function, = assignment→:=, If→if(), %MyVar%→MyVar"}
+      ]
+    },
+    {
+      "run_id": "without_skill",
+      "expectations": [
+        {"text": "msgbox-v2-syntax", "passed": true, "evidence": "MsgBox(\"Hello World\") and MsgBox(MyVar) - v2 function call syntax"},
+        {"text": "assignment-latest-colon", "passed": true, "evidence": "MyVar := \"Some text\""},
+        {"text": "if-parens", "passed": true, "evidence": "if (MyVar = \"Hello\")"},
+        {"text": "no-percent-var", "passed": true, "evidence": "Uses MyVar directly without %"},
+        {"text": "all-v1-fixed", "passed": true, "evidence": "All v1 patterns converted correctly"}
+      ]
+    }
+  ]
+}

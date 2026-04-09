@@ -1,0 +1,34 @@
+{
+  "eval_id": 3,
+  "eval_name": "folder-monitor",
+  "results": [
+    {
+      "run_id": "with_skill",
+      "expectations": [
+        {"text": "uses-v2-syntax", "passed": true, "evidence": "All function calls use v2 syntax"},
+        {"text": "has-requires-directive", "passed": true, "evidence": "Line 1: #Requires AutoHotkey v2.0"},
+        {"text": "monitors-folder", "passed": true, "evidence": "Uses both Loop Files and SetTimer"},
+        {"text": "reads-file", "passed": true, "evidence": "FileRead on line 27"},
+        {"text": "shows-msgbox", "passed": true, "evidence": "MsgBox on lines 30 and 32"},
+        {"text": "tray-menu-functionality", "passed": true, "evidence": "A_TrayMenu used correctly"},
+        {"text": "persistent-or-hotkey", "passed": true, "evidence": "Persistent on line 16"},
+        {"text": "error-handling", "passed": true, "evidence": "try/catch on lines 26-33"},
+        {"text": "no-v1-syntax", "passed": true, "evidence": "No v1 command syntax anywhere"}
+      ]
+    },
+    {
+      "run_id": "without_skill",
+      "expectations": [
+        {"text": "uses-v2-syntax", "passed": false, "evidence": "Uses MenuTray which is v1 syntax. In v2, menus use A_TrayMenu."},
+        {"text": "has-requires-directive", "passed": true, "evidence": "Line 1: #Requires AutoHotkey v2.0"},
+        {"text": "monitors-folder", "passed": true, "evidence": "Uses loop files and SetTimer"},
+        {"text": "reads-file", "passed": true, "evidence": "Uses FileOpen and .ReadLine()"},
+        {"text": "shows-msgbox", "passed": true, "evidence": "MsgBox() calls present"},
+        {"text": "tray-menu-functionality", "passed": false, "evidence": "MenuTray is v1 syntax - should be A_TrayMenu in v2"},
+        {"text": "persistent-or-hotkey", "passed": false, "evidence": "No Persistent directive, script may exit prematurely"},
+        {"text": "error-handling", "passed": true, "evidence": "try block present"},
+        {"text": "no-v1-syntax", "passed": false, "evidence": "MenuTray is v1 syntax, missing Persistent directive"}
+      ]
+    }
+  ]
+}

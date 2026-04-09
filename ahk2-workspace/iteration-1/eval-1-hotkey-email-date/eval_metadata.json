@@ -1,0 +1,42 @@
+{
+  "eval_id": 1,
+  "eval_name": "hotkey-email-date",
+  "prompt": "Write me an AutoHotkey script that maps Ctrl+Shift+T to type my email address and Ctrl+Shift+D to type the current date in YYYY-MM-DD format",
+  "assertions": [
+    {
+      "name": "uses-v2-syntax",
+      "type": "llm",
+      "text": "The script uses AHK v2 syntax (function call style, := assignment, quoted strings) not v1 command syntax"
+    },
+    {
+      "name": "has-requires-directive",
+      "type": "regex",
+      "pattern": "#Requires AutoHotkey v2"
+    },
+    {
+      "name": "ctrl-shift-t-hotkey",
+      "type": "regex",
+      "pattern": "\\^\\+[tT]::"
+    },
+    {
+      "name": "ctrl-shift-d-hotkey",
+      "type": "regex",
+      "pattern": "\\^\\+[dD]::"
+    },
+    {
+      "name": "uses-send",
+      "type": "regex",
+      "pattern": "[Ss]end"
+    },
+    {
+      "name": "date-format-correct",
+      "type": "regex",
+      "pattern": "(A_YYYY|FormatTime|yyyy-MM)"
+    },
+    {
+      "name": "no-v1-syntax",
+      "type": "llm",
+      "text": "The script does not use any AHK v1 syntax (no MsgBox comma syntax, no bare = assignment, no %Var% in expressions)"
+    }
+  ]
+}
