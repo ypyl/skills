@@ -1,0 +1,23 @@
+{
+  "skill_name": "pdf-extract",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Extract all the text from this PDF file: C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf. Save the extracted text to a file called cv_text.txt in the current directory. Make sure to preserve the layout and formatting.",
+      "expected_output": "A text file (cv_text.txt) containing all the text content from the CV PDF, with preserved formatting",
+      "files": ["C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf"]
+    },
+    {
+      "id": 2,
+      "prompt": "Get the metadata and document information from this PDF: C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf. Show me the page count, author, creation date, and any other available metadata.",
+      "expected_output": "Display of PDF metadata including page count, title, author, creation date, PDF version, and page size",
+      "files": ["C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf"]
+    },
+    {
+      "id": 3,
+      "prompt": "Extract any embedded images from this PDF file: C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf. Save them as PNG files in a folder called 'extracted_images'.",
+      "expected_output": "PNG image files in the extracted_images folder, extracted from the PDF (may be empty if no embedded images exist)",
+      "files": ["C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf"]
+    }
+  ]
+}

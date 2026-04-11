@@ -1,0 +1,24 @@
+{
+  "eval_id": 2,
+  "eval_name": "metadata-extraction",
+  "graded_at": "2026-04-11T11:30:00Z",
+  "expectations": [
+    {
+      "text": "page_count_found - Page count information is displayed",
+      "passed": true,
+      "evidence": "metadata.txt shows 'Pages: 1'"
+    },
+    {
+      "text": "metadata_shown - PDF metadata fields are displayed",
+      "passed": true,
+      "evidence": "metadata.txt includes Title, Pages, Page size, PDF version, Producer"
+    },
+    {
+      "text": "correct_tool_used - Used pdfinfo from skill",
+      "passed": true,
+      "evidence": "Subagent used pdfinfo.exe as instructed by skill"
+    }
+  ],
+  "overall_passed": true,
+  "notes": "Successfully extracted metadata using the pdf-extract skill. Used pdfinfo.exe and found all available metadata fields."
+}

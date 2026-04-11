@@ -1,0 +1,19 @@
+{
+  "eval_id": 2,
+  "eval_name": "metadata-extraction",
+  "prompt": "Get the metadata and document information from this PDF: C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf. Show me the page count, author, creation date, and any other available metadata.",
+  "assertions": [
+    {
+      "name": "page_count_found",
+      "description": "Page count information is displayed",
+      "type": "output_contains",
+      "pattern": "Pages:"
+    },
+    {
+      "name": "metadata_shown",
+      "description": "PDF metadata fields are displayed",
+      "type": "output_contains_any",
+      "patterns": ["Title:", "Author:", "Creator:", "Producer:"]
+    }
+  ]
+}

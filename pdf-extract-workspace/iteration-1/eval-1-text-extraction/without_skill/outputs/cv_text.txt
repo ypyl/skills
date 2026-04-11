@@ -1,0 +1,62 @@
+
+--- Page 1 ---
+                                                                                    
+          YAUHEN PYL                                                                
+          Full-Stack Developer / GenAI / 10+ years of experience / 3+ years as Tech/Team Lead
+          📍 Wroclaw, Poland                                                         
+          ✉ yauhen.pyl@gmail.com | 🌐 LinkedIn | Blog                                
+                                                                                    
+          Key Skills                                                                
+                                                                                    
+          ● Languages: C#, JavaScript/TypeScript, SQL, Python                       
+          ● Frameworks/Platforms: .NET, Node.js, React, ASP.NET Core, FastAPI       
+          ● Databases: PostgreSQL, CosmosDB/DynamoDB                                
+          ● Cloud: Azure, AWS                                                       
+          ● Leadership: Technical mentoring, team management, product/project architecture
+                                                                                    
+          Work Experience                                                           
+                                                                                    
+          Consultant | GenAI Integration, Acuity Knowledge Partners (2025 – Present)
+          ● Developing, maintaining, and upgrading a portfolio of Generative‑AI solutions for re‑insurance
+          business workflows (React, ASP Net Core, Python)                          
+          ● Designing and configuring Azure infrastructure (Web Apps, Functions (Python), Cosmos DB,
+          Azure Foundry AI) to support production‑grade services                    
+          ● Building end‑to‑end Proof‑of‑Concepts with Microsoft Agent Framework to automate internal
+          processes and accelerate adoption                                         
+          ● Managing CI/CD pipelines, monitoring, and version control to guarantee reliable deployments
+          and rapid iteration                                                       
+                                                                                    
+          Senior Software Engineer | Team Lead, EPAM Systems (2022 – 2025)          
+          ● Leading the development of AI assistants (Microsoft OpenAI) for the insurance industry
+          ● Architecting solutions and mentoring developers in frontend (React, TypeScript, Vite) and
+          backend (.NET 8, Azure Functions, OpenAI API)                             
+          ● Managing CI/CD pipelines (Azure DevOps) and e2e testing (Playwright)    
+          ● Overseeing cloud infrastructure (Azure CosmosDB, PostgreSQL, Azure AI Services)
+                                                                                    
+          Senior Software Engineer, Virtuace (2022 – 2023)                          
+          ● Led backend refactoring of a CRM system for sports clubs, modernizing legacy ASP.NET to
+                                                                                    
+          ASP.NET Core                                                              
+          ● Designed and implemented a migration strategy to React for frontend modernization
+          ● Provided technical guidance and code reviews for junior/mid-level developers
+                                                                                    
+          Tech Lead | Senior Software Engineer, Crossover For Work (2019 – 2022)    
+          ● Developed a cloud-based workplace platform for distributed teams (TypeScript, AWS,
+          Angular)                                                                  
+          ● Led a team responsible for project-agnostic code review following best practices
+          ● Built automated code analysis tools for GitHub/Bitbucket using C#, Python, Kubernetes
+          ● Provided mentorship and technical guidance across multiple teams        
+                                                                                    
+                                                                                    
+                                                                                    
+          Education & Certifications                                                
+          🎓  BGUIR (CSaN), Bachelor's in Computer Science, 2006 – 2011              
+                                                                                    
+          📜  Certifications: Programming in C# (Microsoft);Cryptography I; Machine Learning; Microsoft
+          Certified: Azure Fundamentals                                             
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    

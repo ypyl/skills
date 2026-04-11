@@ -1,0 +1,24 @@
+{
+  "eval_id": 2,
+  "eval_name": "metadata-extraction",
+  "graded_at": "2026-04-11T11:30:00Z",
+  "expectations": [
+    {
+      "text": "page_count_found - Page count information is displayed",
+      "passed": true,
+      "evidence": "metadata.txt shows 'Number of Pages: 1'"
+    },
+    {
+      "text": "metadata_shown - PDF metadata fields are displayed",
+      "passed": true,
+      "evidence": "metadata.txt includes Title, Producer, file size, and page count"
+    },
+    {
+      "text": "correct_tool_used - Used appropriate extraction tool",
+      "passed": true,
+      "evidence": "Subagent used PyPDF2 library to extract metadata"
+    }
+  ],
+  "overall_passed": true,
+  "notes": "Successfully extracted metadata using Python PyPDF2 library. Found same metadata fields as skill-based approach."
+}

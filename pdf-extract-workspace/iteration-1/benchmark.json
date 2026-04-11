@@ -1,0 +1,101 @@
+{
+  "skill_name": "pdf-extract",
+  "iteration": 1,
+  "created_at": "2026-04-11T11:30:00Z",
+  "summary": {
+    "total_evals": 3,
+    "configurations": [
+      {
+        "name": "pdf-extract (with skill)",
+        "pass_rate": 1.0,
+        "mean_time_seconds": 10.0,
+        "stddev_time": 4.36,
+        "mean_tokens": 5500,
+        "stddev_tokens": 2366,
+        "evals": [
+          {
+            "eval_id": 1,
+            "eval_name": "text-extraction",
+            "passed": true,
+            "time_seconds": 15.0,
+            "tokens": 8500
+          },
+          {
+            "eval_id": 2,
+            "eval_name": "metadata-extraction",
+            "passed": true,
+            "time_seconds": 8.0,
+            "tokens": 4200
+          },
+          {
+            "eval_id": 3,
+            "eval_name": "image-extraction",
+            "passed": true,
+            "time_seconds": 7.0,
+            "tokens": 3800
+          }
+        ]
+      },
+      {
+        "name": "baseline (without skill)",
+        "pass_rate": 1.0,
+        "mean_time_seconds": 17.33,
+        "stddev_time": 5.03,
+        "mean_tokens": 7066,
+        "stddev_tokens": 2066,
+        "evals": [
+          {
+            "eval_id": 1,
+            "eval_name": "text-extraction",
+            "passed": true,
+            "time_seconds": 22.0,
+            "tokens": 9500
+          },
+          {
+            "eval_id": 2,
+            "eval_name": "metadata-extraction",
+            "passed": true,
+            "time_seconds": 12.0,
+            "tokens": 5500
+          },
+          {
+            "eval_id": 3,
+            "eval_name": "image-extraction",
+            "passed": true,
+            "time_seconds": 18.0,
+            "tokens": 6200
+          }
+        ]
+      }
+    ],
+    "comparison": {
+      "pass_rate_delta": 0.0,
+      "time_delta_seconds": -7.33,
+      "time_percent_change": -42.3,
+      "tokens_delta": -1566,
+      "tokens_percent_change": -22.2
+    }
+  },
+  "analyst_observations": [
+    {
+      "type": "efficiency",
+      "observation": "Skill-based approach is significantly faster and uses fewer tokens",
+      "details": "Mean time reduced by 42% (17.3s → 10.0s), tokens reduced by 22% (7066 → 5500)"
+    },
+    {
+      "type": "correctness",
+      "observation": "Both approaches achieved 100% pass rate on all evals",
+      "details": "Skill and baseline both successfully completed all extraction tasks"
+    },
+    {
+      "type": "semantic_accuracy",
+      "observation": "Skill approach demonstrated better semantic understanding",
+      "details": "For image extraction, skill correctly identified no embedded images exist. Baseline rendered entire page as image, which is technically valid but different interpretation of 'extract images'"
+    },
+    {
+      "type": "consistency",
+      "observation": "Skill approach shows more consistent tool selection",
+      "details": "Skill consistently used poppler-utils CLI tools; baseline used different Python libraries for each task (pdfplumber, PyPDF2, PyMuPDF)"
+    }
+  ]
+}

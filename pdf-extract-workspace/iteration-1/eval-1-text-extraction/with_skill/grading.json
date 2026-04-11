@@ -1,0 +1,29 @@
+{
+  "eval_id": 1,
+  "eval_name": "text-extraction",
+  "graded_at": "2026-04-11T11:30:00Z",
+  "expectations": [
+    {
+      "text": "output_file_exists - cv_text.txt file was created",
+      "passed": true,
+      "evidence": "cv_text.txt exists in outputs directory (2449 bytes)"
+    },
+    {
+      "text": "output_not_empty - Extracted text file is not empty",
+      "passed": true,
+      "evidence": "File size is 2449 bytes with substantial content"
+    },
+    {
+      "text": "contains_text_content - Output contains actual text content",
+      "passed": true,
+      "evidence": "File contains 2449 bytes of text including CV content"
+    },
+    {
+      "text": "correct_tool_used - Used pdftotext from skill",
+      "passed": true,
+      "evidence": "Subagent used pdftotext.exe with -layout flag as instructed by skill"
+    }
+  ],
+  "overall_passed": true,
+  "notes": "Successfully extracted text using the pdf-extract skill. Used pdftotext.exe with -layout flag to preserve formatting."
+}

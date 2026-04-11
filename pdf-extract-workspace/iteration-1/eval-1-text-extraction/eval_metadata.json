@@ -1,0 +1,26 @@
+{
+  "eval_id": 1,
+  "eval_name": "text-extraction",
+  "prompt": "Extract all the text from this PDF file: C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf. Save the extracted text to a file called cv_text.txt in the current directory. Make sure to preserve the layout and formatting.",
+  "assertions": [
+    {
+      "name": "output_file_exists",
+      "description": "cv_text.txt file was created",
+      "type": "file_exists",
+      "path": "cv_text.txt"
+    },
+    {
+      "name": "output_not_empty",
+      "description": "Extracted text file is not empty",
+      "type": "file_not_empty",
+      "path": "cv_text.txt"
+    },
+    {
+      "name": "contains_text_content",
+      "description": "Output contains actual text content (not just whitespace)",
+      "type": "contains_content",
+      "path": "cv_text.txt",
+      "min_length": 100
+    }
+  ]
+}

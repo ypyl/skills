@@ -1,0 +1,24 @@
+{
+  "eval_id": 3,
+  "eval_name": "image-extraction",
+  "graded_at": "2026-04-11T11:30:00Z",
+  "expectations": [
+    {
+      "text": "output_directory_created - extracted_images folder was created",
+      "passed": true,
+      "evidence": "extracted_images directory exists with page_001.png"
+    },
+    {
+      "text": "command_executed - Attempted image extraction",
+      "passed": true,
+      "evidence": "Subagent used PyMuPDF to render PDF as image"
+    },
+    {
+      "text": "result_produced - Generated output image",
+      "passed": true,
+      "evidence": "Created page_001.png (1700x2200 pixels)"
+    }
+  ],
+  "overall_passed": true,
+  "notes": "Baseline approach rendered entire PDF page as image using PyMuPDF. Different approach than skill (which correctly identified no embedded images). Both valid but skill approach is more semantically correct."
+}

@@ -1,0 +1,19 @@
+{
+  "eval_id": 3,
+  "eval_name": "image-extraction",
+  "prompt": "Extract any embedded images from this PDF file: C:\\Users\\ypyl\\OneDrive\\Documents\\Yauhen_Pyl_CV_0.pdf. Save them as PNG files in a folder called 'extracted_images'.",
+  "assertions": [
+    {
+      "name": "output_directory_created",
+      "description": "extracted_images folder was created",
+      "type": "directory_exists",
+      "path": "extracted_images"
+    },
+    {
+      "name": "command_executed",
+      "description": "pdfimages tool was used to attempt extraction",
+      "type": "command_used",
+      "tool": "pdfimages"
+    }
+  ]
+}

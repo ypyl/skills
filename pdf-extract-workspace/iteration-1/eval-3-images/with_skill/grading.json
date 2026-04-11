@@ -1,0 +1,24 @@
+{
+  "eval_id": 3,
+  "eval_name": "image-extraction",
+  "graded_at": "2026-04-11T11:30:00Z",
+  "expectations": [
+    {
+      "text": "output_directory_created - extracted_images folder was created",
+      "passed": true,
+      "evidence": "extracted_images directory exists"
+    },
+    {
+      "text": "command_executed - pdfimages tool was used to attempt extraction",
+      "passed": true,
+      "evidence": "Subagent used pdfimages.exe as instructed by skill"
+    },
+    {
+      "text": "correct_analysis - Correctly identified no embedded images",
+      "passed": true,
+      "evidence": "PDF is text-based with no raster images to extract"
+    }
+  ],
+  "overall_passed": true,
+  "notes": "Correctly used pdfimages.exe from skill. PDF contains no embedded raster images (text-based CV from Google Docs). Skill provided accurate assessment."
+}

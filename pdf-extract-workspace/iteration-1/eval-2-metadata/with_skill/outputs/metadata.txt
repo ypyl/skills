@@ -1,0 +1,11 @@
+Title:          Yauhen_Pyl_CV_Short
+Producer:       Skia/PDF m146 Google Docs Renderer
+Tagged:         yes
+Form:           none
+Pages:          1
+Encrypted:      no
+Page size:      612 x 792 pts (letter) (rotated 0 degrees)
+File size:      91134 bytes
+Optimized:      no
+JavaScript:     no
+PDF version:    1.4

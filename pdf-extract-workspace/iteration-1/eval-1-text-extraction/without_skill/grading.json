@@ -1,0 +1,29 @@
+{
+  "eval_id": 1,
+  "eval_name": "text-extraction",
+  "graded_at": "2026-04-11T11:30:00Z",
+  "expectations": [
+    {
+      "text": "output_file_exists - cv_text.txt file was created",
+      "passed": true,
+      "evidence": "cv_text.txt exists in outputs directory (5460 bytes)"
+    },
+    {
+      "text": "output_not_empty - Extracted text file is not empty",
+      "passed": true,
+      "evidence": "File size is 5460 bytes with substantial content"
+    },
+    {
+      "text": "contains_text_content - Output contains actual text content",
+      "passed": true,
+      "evidence": "File contains 5460 bytes of text including CV content"
+    },
+    {
+      "text": "correct_tool_used - Used appropriate extraction tool",
+      "passed": true,
+      "evidence": "Subagent used pdfplumber library to extract text"
+    }
+  ],
+  "overall_passed": true,
+  "notes": "Successfully extracted text using Python pdfplumber library. Produced larger output file (5460 vs 2449 bytes), possibly due to different formatting handling."
+}
